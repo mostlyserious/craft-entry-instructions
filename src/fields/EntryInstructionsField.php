@@ -50,7 +50,7 @@ class EntryInstructionsField extends Field
         return false;
     }
 
-    public function getSettingsHtml()
+    public function getSettingsHtml(): ?string
     {
         return Craft::$app->getView()->renderTemplate(
             'entry-instructions/_components/fields/EntryInstructionsField_settings',

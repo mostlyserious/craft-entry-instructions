@@ -13,6 +13,7 @@ namespace superbig\entryinstructions;
 use superbig\entryinstructions\fields\EntryInstructionsField as EntryInstructionsFieldField;
 
 use Craft;
+use craft\base\Model;
 use craft\base\Plugin;
 use craft\services\Plugins;
 use craft\events\PluginEvent;
@@ -80,7 +81,7 @@ class EntryInstructions extends Plugin
     // Protected Methods
     // =========================================================================
 
-    protected function createSettingsModel() {
+    protected function createSettingsModel(): ?Model {
         return new \superbig\entryinstructions\models\Settings();
     }
 }

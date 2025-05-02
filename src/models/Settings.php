@@ -6,7 +6,7 @@ use craft\base\Model;
 
 class Settings extends Model
 {
-    // This is the basic outside box of the field. 
+    // This is the basic outside box of the field.
     // (These rules get a slightly different version of the identifier prepended,
     // otherwise they have to be written as invalid rules, and they don't get parsed)
     public $outerBoxCSS = <<<'EOS'
@@ -61,7 +61,7 @@ EOS;
         a { text-decoration: underline; }
 EOM;
 
-    public function rules()
+    public function rules(): array
     {
         return [
             [['outerBoxCSS', 'mainCSS'], 'required'],
